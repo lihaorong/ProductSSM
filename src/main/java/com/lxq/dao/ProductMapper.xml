@@ -20,9 +20,7 @@
 		select name from category where id in(
 			select cid from product_category where pid=#{id}
 		)
-	</select>
-
-	
+	</select>	
 	<!-- 添加 -->
 	 <insert id="insertProducts"><!-- 方法二： useGeneratedKeys="true" keyProperty="id" -->
 	 	<selectKey keyProperty="id" resultType="int" order="AFTER">
